@@ -14,7 +14,7 @@ import Camera from 'react-native-camera';
 
 
 export default function App() {
-  const [newTask, setNewTask] = useState('');
+  const [newTask, setNewTask] = useState('test');
   const taskInputHandler = (enteredText) => {
     setNewTask(enteredText);
   };
@@ -27,7 +27,7 @@ export default function App() {
 
       <View style={styles.inputContainer}>
         <TextInput
-          placeholder="Task List"
+          placeholder={newTask}
           style={styles.input}
           onChangeText={taskInputHandler}
           value={newTask}
