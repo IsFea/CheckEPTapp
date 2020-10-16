@@ -13,6 +13,7 @@ export default function App() {
   };
  
   const addTaskHandler = () =>{
+    // currentTask - откуда взялось это значение
     appTask(currentTask => [...currentTask, newTask]);
     console.log(newTask);
   };
@@ -33,9 +34,12 @@ export default function App() {
           onPress = {addTaskHandler}
         /> 
       </View>
+      
+      {/* Это понятно */}
       <View>
         {appTasks.map((task) => <Text>{task}</Text>)}
-      </View>
+      </View> 
+
     </View>
   );
 }
